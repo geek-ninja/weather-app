@@ -15,6 +15,7 @@ function WeatherBody() {
     const [bgColor,setBgColor] = useState('#6DF9E5')
     const [textColor,setTextColor] = useState('#232855')
     
+    
     useEffect(() => {
         fetchWeather(city)
         .then((data) => {
@@ -34,7 +35,7 @@ function WeatherBody() {
             </div>
             <div className='weather_body_header'>
                 <div className='weather_body_header_img'><LocationOnIcon fontSize='large'/></div>&nbsp;&nbsp;
-                <div className='weather_body_header_city_name'>{city ? <h2>{city}</h2> : <div className='weather_body_header_city_name_loading'> <h2>search your place</h2> &nbsp;&nbsp; <CircularProgress color='inherit' size={20}/></div>}</div>
+                <div className='weather_body_header_city_name'>{cityWeather ? <><h2>{city}</h2> <p>{cityWeather.sys.country}</p></> : <div className='weather_body_header_city_name_loading'> <h2>search your place</h2> &nbsp;&nbsp; <CircularProgress color='inherit' size={20}/></div>}</div>
             </div>
         </div>
         {
