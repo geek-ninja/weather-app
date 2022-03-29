@@ -1,0 +1,109 @@
+.weather_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 1px rgba(0,0,0,0.3);
+}
+.weather_body_error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+}
+.weather_body_search_input{
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 10px;
+    max-width: 200px;
+    width: 100%;
+    height: 20px;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+.weather_body_search_input > input{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+    background-color: transparent;
+}
+.weather_body_header{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.weather_body_header_city_name > h2{
+    text-transform: capitalize;
+}
+.weather_body_header_city_name_loading{
+    display: flex;
+    align-items: center;
+}
+.weather_body_info_temp_details{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px 0;
+}
+.weather_body_info_temp_wind,.weather_body_info_temp_humid{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+.weather_body_info_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.weather_body_info_img > img{
+    object-fit: contain;
+    max-width: 300px;
+    width: 100%;
+}
+.weather_body_info_img_details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.weather_body_info_img_details > p{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.weather_body_info,.weather_body_info_temp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.weather_body_info_temp_avg > span{
+    display: flex;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 768px){
+    .weather_body_search_input{
+        padding:0;
+    }
+    .weather_body_info_temp_avg > span{
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .weather_body{
+        margin: 0 5px;
+    }
+    .weather_body_info_img_details > p{
+        text-align: center;
+    }
+}
