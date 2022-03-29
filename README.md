@@ -50,3 +50,4 @@ export const fetchWeather = async (city) => {
 }
 
 ```
+<h2>Contributions to this project is highly appreciable</p>
